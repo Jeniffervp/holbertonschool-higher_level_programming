@@ -6,7 +6,7 @@ def uppercase(str):
             b = ord(str[a]) - 32
         else:
             b = ord(str[a])
-        if a != len(str) - 1:
+        if a != len(str):
             print("{:s}".format(chr(b)), end="")
         a += 1
     print("")
