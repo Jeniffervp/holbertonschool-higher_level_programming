@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except ZeroDivisionError:
             print("division by 0")
         except IndexError:
-            print("division by 0")
+            print("out of range")
         finally:
             list_resul.append(resul)
     return list_resul
