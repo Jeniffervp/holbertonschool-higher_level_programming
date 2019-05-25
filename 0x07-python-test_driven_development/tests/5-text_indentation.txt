@@ -20,16 +20,6 @@ String
    <BLANKLINE>
    Quonam modo?
    <BLANKLINE>
-   <BLANKLINE>
-
-It also work with characters.
-
-::
-
-   >>> text = ("L")
-   >>> text_indentation(text)
-   L
-
 
 Non-Numbers
 ===========
