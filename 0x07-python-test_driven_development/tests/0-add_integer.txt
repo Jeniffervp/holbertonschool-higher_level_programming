@@ -21,6 +21,10 @@ that value is equivalent to using the ``+`` operator.
    -8
    >>> add_integer(-20, 5)
    -15
+   >>> add_integer(0, 0)
+   0
+   >>> add_integer(29, 0)
+   29
 
 
 It also works with floating-point values.
@@ -31,6 +35,7 @@ It also works with floating-point values.
    5
    >>> add_integer(-10.5, 3)
    -7
+
 
 Non-Numbers
 ===========
@@ -55,3 +60,11 @@ floats
    >>> add_integer(100, 'H')
    Traceback (most recent call last):
    TypeError: b must be an integer
+
+   >>> add_integer(float(2**1023), float(2**1023))
+   Traceback (most recent call last):
+   OverflowError: overflow error
+
+   >>> add_integer()
+   Traceback (most recent call last):
+   TypeError: add_integer() missing 1 required positional argument: 'a'
