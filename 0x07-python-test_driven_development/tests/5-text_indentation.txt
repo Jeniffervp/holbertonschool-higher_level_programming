@@ -24,14 +24,12 @@ String
    >>> text = "Holberton School"
    >>> text_indentation(text)
    Holberton School
-   <BLANKLINE>
 
    >>> text = "Holberton. School"
    >>> text_indentation(text)
    Holberton.
    <BLANKLINE>
    School
-   <BLANKLINE>
 
    >>> text = "Holberton. School? How are you:    John"
    >>> text_indentation(text)
