@@ -1,0 +1,48 @@
+# 5-text_indentation.txt
+===============================
+How to Use 5-text_indentation.py
+===============================
+
+This library is very simple, since it only has one function called
+``text_indentation()``.
+
+String
+=======
+
+``text_indentation()`` prints a text with 2 new lines after each of these characters: ., ? and :
+
+::
+
+   >>> text_indentation = __import__('5-text_indentation').text_indentation
+   >>> text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam
+   modo?
+   >>> text_indentation(text)
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+   
+   Quonam modo?
+
+It also work with characters.
+
+::
+
+   >>> text = ("L")
+   >>> text_indentation(text)
+   L
+
+
+Non-Numbers
+===========
+
+Raise error message in cases that the variable are not a string.
+
+::
+
+   >>> text = (3)
+   >>> text_indentation(text)
+   Traceback (most recent call last):
+   TypeError: text must be a string
+
+   >>> text = (3.5)
+   >>> text_indentation(text)
+   Traceback (most recent call last):
+   TypeError: text must be a string

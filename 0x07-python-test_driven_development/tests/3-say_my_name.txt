@@ -1,0 +1,58 @@
+# 3-say_my_name.txt
+===============================
+How to Use 3-say_my_name.py
+===============================
+
+This library is very simple, since it only has one function called
+``say_my_name()``.
+
+String
+=======
+
+``say_my_name()`` prints a square with the character #.
+
+::
+
+   >>> say_my_name = __import__('3-say_my_name').say_my_name
+   >>> say_my_name("Jeniffer", "Vanegas")
+   My name is Jeniffer Vanegas
+   >>> say_my_name("Jeniffer")
+   My name is Jeniffer 
+
+With characters values.
+
+::
+
+   >>> say_my_name("J", "Vanegas")
+   My name is J Vanegas
+   >>> say_my_name("Jeniffer", "v")
+   My name is Jeniffer v
+   >>> say_my_name("", "Vanegas")
+   My name is  Vanegas
+
+Numbers
+===========
+
+Raise error message in cases that one of the variable are integers or floats
+
+::
+
+   >>> say_my_name("Jeniffer", 12)
+   Traceback (most recent call last):
+   TypeError: last_name must be a string
+
+   >>> say_my_name(340, "Vanegas")
+   Traceback (most recent call last):
+   TypeError: first_name must be a string
+
+   >>> say_my_name("J", 2.0)
+   Traceback (most recent call last):
+   TypeError: last_name must be a string
+
+   >>> say_my_name(4.5, "V")
+   Traceback (most recent call last):
+   TypeError: first_name must be a string
+
+   >>> say_my_name(12, 12)
+   Traceback (most recent call last):
+   TypeError: first_name must be a string
