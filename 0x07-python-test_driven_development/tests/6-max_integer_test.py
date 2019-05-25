@@ -10,14 +10,14 @@ class TestMaxInteger(unittest.TestCase):
         # test max integer
         self.assertAlmostEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertAlmostEqual(max_integer([1, 3, 4, 2]), 4)
-        self.assertAlmostEqual(max_integer([1.4, 1,7, 8.7], 8.7)
-        self.assertAlmostEqual(max_integer([1, 5.6, 3], 5.6)
-        self.assertAlmostEqual(max_integer([1.5], 1.5)
-        self.assertAlmostEqual(max_integer([-1, -9, -15], -1)
-        self.assertAlmostEqual(max_integer([-15], -15)
-        self.assertAlmostEqual(max_integer(["Reason","why","The"], why)
-        self.assertAlmostEqual(max_integer("Bloody"), y)
-        self.assertAlmostEqual(max_integer([], None)
+        self.assertAlmostEqual(max_integer([1.4, 1,7, 8.7]), 8.7)
+        self.assertAlmostEqual(max_integer([1, 5.6, 3]), 5.6)
+        self.assertAlmostEqual(max_integer([1.5]), 1.5)
+        self.assertAlmostEqual(max_integer([-1, -9, -15]), -1)
+        self.assertAlmostEqual(max_integer([-15]), -15)
+        self.assertAlmostEqual(max_integer(["Reason","why","The"]), 'why')
+        self.assertAlmostEqual(max_integer("Bloody"), 'y')
+        self.assertAlmostEqual(max_integer([]), None)
         self.assertAlmostEqual(max_integer(), None)
 
     def text_error(self):
