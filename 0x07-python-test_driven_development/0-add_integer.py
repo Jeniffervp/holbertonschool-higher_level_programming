@@ -14,4 +14,6 @@ def add_integer(a, b=98):
     elif type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
     else:
+        if abs(a + b) == float('inf'):
+            raise OverflowError('overflow error')
         return (int(a) + int(b))
