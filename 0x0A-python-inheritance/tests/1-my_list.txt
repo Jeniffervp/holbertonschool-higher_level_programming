@@ -52,3 +52,11 @@ How to Use 1-my_list.py
    >>> list_1.append(1)
    >>> list_1.print_sorted()
    [1, 1, 1, 1]
+
+   >>> list_1 = MyList()
+   >>> list_1.append(1.5)
+   >>> list_1.append(1)
+   >>> list_1.append(4.5)
+   >>> list_1.append(2)
+   >>> list_1.print_sorted()
+   [1, 1.5, 2, 4.5]
