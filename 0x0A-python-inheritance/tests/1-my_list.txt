@@ -1,0 +1,54 @@
+# 1-my_list.txt
+===============================
+How to Use 1-my_list.py
+===============================
+
+   >>> MyList = __import__('1-my_list').MyList
+   >>> list_1 = MyList()
+   >>> list_1.append(1)
+   >>> list_1.append(3)
+   >>> list_1.append(2)
+   >>> list_1.append(4)
+   >>> print(list_1)
+   [1, 3, 2, 4]
+   >>> list_1.print_sorted()
+   [1, 2, 3, 4]
+
+   >>> list_1 = MyList()
+   >>> list_1.append(-1)
+   >>> list_1.append(-3)
+   >>> list_1.append(-2)
+   >>> list_1.append(0)
+   >>> list_1.append(-4)
+   >>> print(list_1)
+   [-1, -3, -2, 0, -4]
+   >>> list_1.print_sorted()
+   [-4, -3, -2, -1, 0]
+
+   >>> list_1 = MyList()
+   >>> list_1.append(-1)
+   >>> list_1.append(3)
+   >>> list_1.append(-2)
+   >>> list_1.append(0)
+   >>> list_1.append(4)
+   >>> print(list_1)
+   [-1, 3, -2, 0, 4]
+   >>> list_1.print_sorted()
+   [-2, -1, 0, 3, 4]
+
+   >>> list_1 = MyList()
+   >>> list_1.print_sorted()
+   []
+
+   >>> list_1 = MyList()
+   >>> list_1.append(1)
+   >>> list_1.print_sorted()
+   [1]
+
+   >>> list_1 = MyList()
+   >>> list_1.append(1)
+   >>> list_1.append(1)
+   >>> list_1.append(1)
+   >>> list_1.append(1)
+   >>> list_1.print_sorted()
+   [1, 1, 1, 1]
