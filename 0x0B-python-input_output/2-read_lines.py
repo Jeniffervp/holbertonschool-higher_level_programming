@@ -6,5 +6,5 @@ def read_lines(filename="", nb_lines=0):
             line = myfile.readline()
             if not line:
                 break
-                cont_line += 1
-                print(line, end='')
+            cont_line += 1
+            print(line, end='')
