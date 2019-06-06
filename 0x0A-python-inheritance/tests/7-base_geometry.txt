@@ -65,3 +65,19 @@ or are less than 0 or 0
    >>> bg.area()
    Traceback (most recent call last):
    Exception: area() is not implemented
+
+   >>> bg.integer_validator("age", True)
+   Traceback (most recent call last):
+   TypeError: age must be an integer
+
+   >>> bg.integer_validator("age", {3, 4})
+   Traceback (most recent call last):
+   TypeError: age must be an integer
+
+   >>> bg.integer_validator("age", None)
+   Traceback (most recent call last):
+   TypeError: age must be an integer
+
+   >>> bg.integer_validator("age", (4,))
+   Traceback (most recent call last):
+   TypeError: age must be an integer
