@@ -5,8 +5,8 @@ class MyInt(int):
         self.value = value
         int.__init__(self)
 
-    def __equal__(self, n):
+    def __eq__(self, n):
         return self.value != n
 
-    def __negative__(self, n):
+    def __ne__(self, n):
         return not self == n
