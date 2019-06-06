@@ -61,3 +61,7 @@ or are less than 0 or 0
    >>> bg.integer_validator("distance", name)
    Traceback (most recent call last):
    NameError: name 'name' is not defined
+
+   >>> bg.area()
+   Traceback (most recent call last):
+   Exception: area() is not implemented
