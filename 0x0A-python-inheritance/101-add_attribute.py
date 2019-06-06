@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def new_attribute(obj, name, value):
-    if isinstance(obj, (str, int, float, list, tuple, dict, bool,
-                        complex))or obj is None:
+    if isinstance(obj, (str, int, float, list, tuple, dict, bool, complex))
         raise TypeError("can't add new attribute")
-    obj.name = value
+    else:
+        setattr(obj, name, value)
