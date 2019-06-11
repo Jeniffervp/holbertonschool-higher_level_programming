@@ -3,8 +3,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-
+    """Ineheritance from base class"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialization """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -13,10 +14,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """funtion that return the width of a rectangle """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Private function for width """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -26,10 +29,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Function that return the height of a rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Private funcction to handle the value of height """
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -39,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Function to return the X axis """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Handle X axis """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -52,10 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Function to return the Y axis """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Handle Y axis """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -64,9 +73,11 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """Function to return the area"""
         return self.height * self.width
 
     def display(self):
+        """Print the rectangle with # """
         if self.__width == 0 or self.__height == 0:
             print()
         for a in range(self.y):
@@ -78,10 +89,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """Magic function to print a representation in human language"""
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """Function to update the values"""
         list_1 = ['id', 'width', 'height', 'x', 'y']
         if args:
             for arg in range(len(args)):
@@ -91,5 +104,6 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Funtion to make a dictionary"""
         return ({'id': self.id, 'width': self.width,
                  'height': self.height, 'x': self.x, 'y': self.y})

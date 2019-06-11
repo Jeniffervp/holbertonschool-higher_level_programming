@@ -4,9 +4,11 @@ import csv
 
 
 class Base():
+    """class base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """initialization point"""
         if id is not None:
             self.id = id
         else:
@@ -15,12 +17,14 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Function to go from python to .json"""
         if list_dictionaries is None or list_dictionaries == "":
             return []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Function to save a file to .json """
         lista = []
         if list_objs is not None:
             for a in list_objs:
@@ -32,12 +36,14 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        """Function to go from .json to python string """
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """Funtion to create a dummy"""
         if cls.__name__ == 'Rectangle':
             replica = cls(1, 1)
         elif cls.__name__ == 'Square':
@@ -47,6 +53,7 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
+        """Funtion to load a .json file"""
         listo = []
         try:
             with open(cls.__name__ + '.json', 'r') as myfile:
@@ -59,6 +66,7 @@ class Base():
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """Funtion ti save a file as .csv"""
         for a in list_objs:
             dict_1 = a.to_dictionary()
         with open(cls.__name__ + ".csv", 'w') as mycsv:
@@ -70,6 +78,7 @@ class Base():
 
     @classmethod
     def load_from_file_csv(cls):
+        """Read a .csv file"""
         list_csv = []
         with open(cls.__name__ + ".csv", newline='') as mycsv:
             var = csv.DictReader(mycsv)
