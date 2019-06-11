@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for Rectangle inherited from base """
 from models.base import Base
 
 

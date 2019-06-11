@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module for square inherited from rectangle"""
 from models.rectangle import Rectangle
 
 
