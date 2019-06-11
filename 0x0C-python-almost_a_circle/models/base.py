@@ -63,20 +63,18 @@ class Base():
             dict_1 = a.to_dictionary()
         with open(cls.__name__ + ".csv", 'w') as mycsv:
             keys = dict_1.keys()
-            pepito = csv.DictWriter(mycsv, keys)
-            pepito.writeheader()
-            pepito.writerow(dict_1)
-        
-
+            lista = csv.DictWriter(mycsv, keys)
+            lista.writeheader()
+            for a in list_objs:
+                lista.writerow(a.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
-        juanitolist = []
-
+        list_csv = []
         with open(cls.__name__ + ".csv", newline='') as mycsv:
             var = csv.DictReader(mycsv)
             for row in var:
                 for key, value in row.items():
                     row[key] = int(value)
-                juanitolist.append(row)
-        return [cls.create(**a) for a in juanitolist]
+                list_csv.append(cls.create(**row))
+        return list_csv
