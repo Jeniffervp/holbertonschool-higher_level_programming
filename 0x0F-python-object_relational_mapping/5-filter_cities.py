@@ -14,7 +14,7 @@ if __name__ == "__main__":
     poin = conn_table.cursor()
     poin.execute("SELECT cities.name FROM cities \
     WHERE cities.state_id = (SELECT states.id FROM states \
-    WHERE states.name = %s) ORDER BY cities.id ASC;",(argv[4],))
+    WHERE states.name = %s) ORDER BY cities.id ASC;", (argv[4],))
 
     to_print_1 = []
 

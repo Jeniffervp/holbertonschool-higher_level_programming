@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     poin = conn_table.cursor()
     poin.execute("SELECT id, name FROM states \
-    WHERE name LIKE %s ORDER BY id ASC",(argv[4],))
+    WHERE name LIKE %s ORDER BY id ASC", (argv[4],))
 
     for order_to_print in poin:
         print(order_to_print)
