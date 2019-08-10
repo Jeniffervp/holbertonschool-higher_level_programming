@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     poin = conn_table.cursor()
     order_to_print = "SELECT id, name FROM states \
-    WHERE name LIKE BYNARY '{}' ORDER BY id ASC".format(argv[4])
+    WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(argv[4])
     poin.execute(order_to_print)
 
     for order_to_print in poin:
