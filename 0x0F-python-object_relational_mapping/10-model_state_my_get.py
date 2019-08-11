@@ -14,7 +14,8 @@ if __name__ == "__main__":
     start = sessionmaker()
     start.configure(bind=engine)
     sta = start()
-    selec = sta.query(State).filter_by(name = argv[4]).order_by(asc(State.id)).one_or_none()
+    selec = sta.query(State).filter_by(
+        name=argv[4]).order_by(asc(State.id)).one_or_none()
 
     if selec:
         print("{}".format(selec.id))
