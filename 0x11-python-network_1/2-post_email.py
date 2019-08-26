@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     url_1 = argv[1]
 
-    post_email = {'email':argv[2]}
+    post_email = {'email': argv[2]}
 
     email = parse.urlencode(post_email)
     email = email.encode('utf-8')
