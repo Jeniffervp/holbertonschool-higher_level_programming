@@ -2,6 +2,6 @@
 
 exports.converter = function (base) {
   return function (argument) {
-    return argument.toString(base)
-  }
-}
+    return argument.toString(base);
+  };
+};
