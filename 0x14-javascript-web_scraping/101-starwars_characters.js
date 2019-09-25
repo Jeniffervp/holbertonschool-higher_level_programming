@@ -1,8 +1,10 @@
 #!/usr/bin/node
-function doRequest(url) {
+const request = require('request');
+const dir = 'http://swapi.co/api/films/' + process.argv[2];
+function doRequest (url) {
   return new Promise(function (resolve, reject) {
     request(url, function (error, res, body) {
-      if (!error && res.statusCode == 200) {
+      if (!error && res.statusCode === 200) {
         resolve(body);
       } else {
         reject(error);
@@ -11,13 +13,12 @@ function doRequest(url) {
   });
 }
 
-// Usage:
-
-async function main(dir) {
-  let res = await doRequest(dir);
-  console.log(res);
+async function main (dir) {
+  const res = await doRequest(dir);
+  for (const i of JSON.parse(res).characters) {
+    const res2 = await doRequest(i);
+    console.log(JSON.parse(res2).name);
+  }
 }
 
-const re = require('request');
-const dir = 'http://swapi.co/api/films/' + process.argv[2];
 main(dir);
